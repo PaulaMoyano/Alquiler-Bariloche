@@ -1,0 +1,190 @@
+@import 'base/styles';
+@import 'servicios';
+@media (min-width: $breakpoint) {
+    .tituloIndex {
+        letter-spacing: .3em;
+    }
+}
+
+.videoContainer {
+    height: 95vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.videoContainer video {
+    height: 100%;
+    width: auto;
+}
+
+
+.videoContainer img {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.videoContainer div {
+    position: absolute;
+    top: 30vh;
+    left: 8%;
+    transform: translateY(-50%);
+    &:last-child {
+        top: calc(30vh + 80px)
+    }
+}
+
+.moreSection {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moreSection span {
+    font-size: 70%;
+}
+
+.moreLine {
+    height: 25px;
+    width: 0;
+    border: $base-color 1px solid;
+}
+
+.section {
+    &:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &:first-child {
+        padding-top: 0 !important;
+    }
+
+    &#nosotros {
+        padding-top: 1em !important;
+    }
+}
+
+@media (min-width: $breakpoint) {
+    .subtitleIndex {
+        overflow: hidden;
+        animation: typing 2.5s steps(21, end), blink-caret .75s step-end infinite;
+        white-space: nowrap;
+        border-right: .15em solid $base-color;
+        letter-spacing: .3em;
+    }
+}
+
+.contact {
+    div {
+        margin-bottom: 50px;
+    }
+    .contact-main p {
+        color: $amarillo;
+        font-weight: bold;
+        font-size: 95%;
+        @media (min-width: $breakpoint) {
+            font-size: 215%;
+        }
+        line-height: 1;
+        margin: 0;
+    }
+    .contact-point p {
+        color: rgb(135, 135, 135);
+        font-weight: bold;
+        font-size: 95%;
+        @media (min-width: $breakpoint) {
+            font-size: 200%;
+        }
+        margin: 0;
+    }
+    .contact-location a {
+        color: $amarillo;
+        font-weight: bold;
+        font-size: 95%;
+        @media (min-width: $breakpoint) {
+            font-size: 170%;
+        }
+        border-bottom: 0.2rem solid $amarillo;
+        text-decoration: none;
+    }
+    .contact-media {
+        display: flex;
+        a {
+            border: black 1px solid;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            &:hover {
+                background-color: $amarillo;
+                border-color: $amarillo;
+                img {
+                    filter: invert(100%);
+                }
+            }
+        }
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+.contact-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img {
+        display: block;
+        max-height: 8vh;
+        max-width: 20%;
+        @media (min-width: $breakpoint) {
+            max-width: 80%;
+            max-height: 50vh;
+        }
+        &:first-child {
+            animation: float 6s ease-in-out infinite;
+        }
+        &:last-child {
+            animation: scale 6s ease-in-out infinite;
+        }
+    }
+}
+
+.letra-celeste {
+    color: #09C8B0;
+    font-weight: bold;
+}
+
+.hidden-mobile {
+    display: none;
+    @media (min-width: $breakpoint) {
+        display: inline;
+    }
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon,
+.carousel-indicators {
+    filter: invert(1);
+}
+
+.carousel-item {
+    max-height: 500px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.text-nosotros,
+.text-nosotros span {
+    font-size: 0.8rem;
+}

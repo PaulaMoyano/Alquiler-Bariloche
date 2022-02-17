@@ -1,0 +1,63 @@
+@import 'variables';
+@import 'animations';
+* {
+    font-family: $base-font;
+    font-size: 25px;
+    scroll-behavior: smooth;
+}
+
+.title,
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+    text-transform: uppercase;
+    animation: aparecer 6s;
+}
+
+.title {
+    font-size: 120%;
+}
+
+.subtitle {
+    font-size: 80%;
+}
+
+@media (min-width: 1024px) {
+    .title {
+        font-size: 200%;
+    }
+    .subtitle {
+        font-size: 110%;
+    }
+}
+
+section {
+    animation-duration: 2s;
+    animation-name: aparecer;
+}
+
+.bg-primary {
+    background-color: $base-color;
+}
+
+.bg-secondary {
+    background-color: $secondary-color;
+}
+
+.font-primary {
+    color: $base-color
+}
+
+.font-secondary {
+    color: $secondary-color;
+}
+
+.primary-theme {
+    @extend .bg-secondary;
+    @extend .font-primary;
+}
+
+.secondary-theme {
+    @extend .bg-primary;
+    @extend .font-secondary;
+}
